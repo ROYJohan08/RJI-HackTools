@@ -13,3 +13,5 @@ alias htbstart='openvpn ~/.ovpnconfig/HTB-Start.ovpn 1>/dev/null &'
 alias htbacademy='openvpn ~/.ovpnconfig/HTB-Academy.ovpn 1>/dev/null &'
 alias sudo='sudo '
 `
+Install seclist : 
+`git clone https://github.com/danielmiessler/SecLists`
