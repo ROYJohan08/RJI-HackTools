@@ -1,11 +1,17 @@
-- Start by install [Kali-linux on virtualbox](https://www.kali.org/get-kali/#kali-virtual-machines).
-- Once the machine strted, run `sudo apt-get update -y` and `sudo apt-get full-upgrade -y`
+# 1. Introduction.
 
-# X.x. Install the VPN shortcut.
+# 2.1. Installation de la machine.
+- Installez un systeme de gestion de machine virtuelle comme [Virtulbox](https://www.virtualbox.org/wiki/Downloads).
+- Installez la machine virtuelle [Kali-linux](https://www.kali.org/get-kali/#kali-virtual-machines).
+- Une fois la machine démarré, lancez les commandes : `sudo apt-get update -y` and `sudo apt-get full-upgrade -y`.
 
-- Start by create the VPN profile directory : `mkdir -p ~/.ovpnconfig`
-- Insert your ".ovpn" files in there.
-- Insert in ".zshrc" :
+# 2.2. Installation des VPN HackTheBox
+
+- Creez le fichier de configuration des VPN avec la commande : `mkdir -p /home/kali/.ovpnconfig`
+- Déplacez-vous dans le fichier via : `cd /home/kali/.ovpnconfig/`
+- Inserez vos configurations ".ovpn".
+- Modifiez `.zshrc` avec la commande : `notepadqq /home/kali/.zshrc`.
+- Ajoutez les lignes : 
 ```
 # HTB VPN Shortcuts:
 alias htbmachine='openvpn ~/.ovpnconfig/HTB-Machine.ovpn 1>/dev/null &'
@@ -14,11 +20,11 @@ alias htbacademy='openvpn ~/.ovpnconfig/HTB-Academy.ovpn 1>/dev/null &'
 alias sudo='sudo '
 ```
 
-# X.x. Install Tools
-- Create Tools Folder : `mkdir Tools`
-- Move in Tools folder: `cd Tools`
-- Install seclist : `git clone https://github.com/danielmiessler/SecLists`
-- Install gobuster : `sudo apt-get instll gobuster`
+# 2.3. Instllation des outils
+- Créez le dossier Outils : `mkdir /home/kali/Tools`
+- Rendez-vous dans ce dossier : `cd Tools`
+- Installez seclist : `git clone https://github.com/danielmiessler/SecLists`
+- Installez gobuster : `sudo apt-get instll gobuster`
 
 
 ## Using Ffuf.
