@@ -3,8 +3,7 @@
 
 # X.x. Install the VPN shortcut.
 
-- Start by create the VPN profile directory.
-  - `mkdir -p ~/.ovpnconfig`
+- Start by create the VPN profile directory : `mkdir -p ~/.ovpnconfig`
 - Insert your ".ovpn" files in there.
 - Insert in ".zshrc" :
 ```
@@ -16,10 +15,13 @@ alias sudo='sudo '
 ```
 
 # X.x. Install Tools
-Create Tools Folder : 
-`mkdir Tools`
-Move in Tools folder:
-`cd Tools`
+- Create Tools Folder : `mkdir Tools`
+- Move in Tools folder: `cd Tools`
+- Install seclist : `git clone https://github.com/danielmiessler/SecLists`
+- Install gobuster : `sudo apt-get instll gobuster`
 
-Install seclist : 
-`git clone https://github.com/danielmiessler/SecLists`
+
+## Using Ffuf.
+Search directorys : `ffuf -w Tools/Discovery/Web-Content/common.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ`
+Search subdomains : `ffuf -w Tools/Discovery/Web-Content/common.txt:FUZZ -u https://FUZZ.hackthebox.eu/`
+Search vhost : `ffuf -w Tools/Discovery/Web-Content/common.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx`
