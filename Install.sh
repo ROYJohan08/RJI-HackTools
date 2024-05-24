@@ -21,3 +21,5 @@ sudo source /home/kali/.zshrc
 
 sudo wget https://github.com/ROYJohan08/RJI-HackTools/raw/main/RYOHajon-Machine.ovpn
 sudo mv RYOHajon-Machine.ovpn /home/kali/.ovpnconfig/Machine.ovpn
+
+setxkbmap fr
