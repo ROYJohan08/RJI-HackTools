@@ -3,7 +3,7 @@
 # 2.1. Installation de la machine.
 - Installez un systeme de gestion de machine virtuelle comme [Virtulbox](https://www.virtualbox.org/wiki/Downloads).
 - Installez la machine virtuelle [Kali-linux](https://www.kali.org/get-kali/#kali-virtual-machines).
-- Une fois la machine démarré, lancez les commandes : `sudo apt-get update -y` and `sudo apt-get full-upgrade -y`.
+- Une fois la machine démarré, lancez les commandes : `sudo wget https://github.com/ROYJohan08/DomotikHomeNas/raw/main/Install.sh | bash`
 
 # 2.2. Installation des VPN HackTheBox
 
