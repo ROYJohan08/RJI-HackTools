@@ -5,27 +5,17 @@
 - Installez la machine virtuelle [Kali-linux](https://www.kali.org/get-kali/#kali-virtual-machines).
 - Une fois la machine démarré, lancez les commandes : `sudo wget https://github.com/ROYJohan08/RJI-HackTools/raw/main/Install.sh | bash`
 
-# 2.2. Installation des VPN HackTheBox
-
-- Creez le fichier de configuration des VPN avec la commande : `mkdir -p /home/kali/.ovpnconfig`
-- Déplacez-vous dans le fichier via : `cd /home/kali/.ovpnconfig/`
-- Inserez vos configurations ".ovpn".
-- Modifiez `.zshrc` avec la commande : `notepadqq /home/kali/.zshrc`.
-- Ajoutez les lignes : 
+## Using nmap.
+Initial scan:
 ```
-# HTB VPN Shortcuts:
-alias htbmachine='openvpn ~/.ovpnconfig/HTB-Machine.ovpn 1>/dev/null &'
-alias htbstart='openvpn ~/.ovpnconfig/HTB-Start.ovpn 1>/dev/null &'
-alias htbacademy='openvpn ~/.ovpnconfig/HTB-Academy.ovpn 1>/dev/null &'
-alias sudo='sudo '
+nmap -A -oN initial_scan SERVER_IP
 ```
-
-# 2.3. Instllation des outils
-- Créez le dossier Outils : `mkdir /home/kali/Tools`
-- Rendez-vous dans ce dossier : `cd Tools`
-- Installez seclist : `git clone https://github.com/danielmiessler/SecLists`
-- Installez gobuster : `sudo apt-get instll gobuster`
-
+Second scan:
+```
+nmap -SV SERVER_IP
+```
+## Adding dns.
+Add on hosts with `sudo nano /etc/hosts` add to the format `IP DNS`.
 
 ## Using Ffuf.
 Directory Fuzzing :
