@@ -16,6 +16,7 @@ holehe test@gmail.com
 ```
 ### Reponse
 ## SpiderFoot
+SpiderFoot est un outil d'automatisation de renseignement d'origine source ouverte (OSINT).
 ### Installation
 ```
 git clone https://github.com/smicallef/spiderfoot.git
