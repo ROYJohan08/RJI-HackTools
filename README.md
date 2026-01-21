@@ -5,55 +5,11 @@
 - Installez la machine virtuelle [Kali-linux](https://www.kali.org/get-kali/#kali-virtual-machines).
 - Une fois la machine démarré, lancez les commandes : `sudo wget https://github.com/ROYJohan08/RJI-HackTools/raw/main/Install.sh | bash`
 
-## Using nmap.
-Initial scan:
-```
-nmap -A -oN initial_scan SERVER_IP
-```
-Second scan:
-```
-nmap -SV SERVER_IP
-```
 ## Adding dns.
 Add on hosts with `sudo nano /etc/hosts` add to the format `IP DNS`.
 
-## Using Ffuf.
-Directory Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ
-```
-Extension Fuzzing :
-  ```
-  ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://SERVER_IP:PORT/indexFUZZ
-```
-Page Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/blog/FUZZ.php
-```
-Recursive Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v
-```
-Sub-domain Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u https://FUZZ.hackthebox.eu/
-```
-VHost Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb' -fs xxx`
-```
-Parameter Fuzzing - GET :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
-```
-Parameter Fuzzing - POST :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
-```
-Value Fuzzing :
-```
-ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
-```
+[Enumeration](00-Enumeration.md)
+
 Others : 
 ```
 sudo sh -c 'echo "SERVER_IP academy.htb" >> /etc/hosts'	Add DNS entry
