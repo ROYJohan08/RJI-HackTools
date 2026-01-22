@@ -11,6 +11,10 @@ Used port list and infos complete : [Nmap](Tools.md#nmap)
 ```
 nmap -SV SERVER_IP
 ```
+Web directory BruteForce : [Dirb](Tools.md#dirb) 
+```
+dirb http://SERVER_IP:PORT/
+```
 Web directory BruteForce : [ffuf](Tools.md#ffuf) 
 ```
 ffuf -w /home/kali/Tools/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ
