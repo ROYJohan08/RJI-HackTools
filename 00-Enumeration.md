@@ -7,9 +7,13 @@ Used port list and infos : [Nmap](Tools.md#nmap)
 ```
 nmap -A -oN initial_scan SERVER_IP
 ```
-Used port list and infos complete : [Nmap](Tools.md#nmap)  
+Used port list and version complete : [Nmap](Tools.md#nmap)  
 ```
-nmap -SV SERVER_IP
+nmap -sV -O SERVER_IP -T5
+```
+Used UDP port list and version complete : [Nmap](Tools.md#nmap)  
+```
+nmap -sU -sV SERVER_IP -T5
 ```
 Web directory BruteForce : [Dirb](Tools.md#dirb) 
 ```
