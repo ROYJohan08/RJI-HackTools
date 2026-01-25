@@ -4,11 +4,13 @@
 - Installez un systeme de gestion de machine virtuelle comme [Virtulbox](https://www.virtualbox.org/wiki/Downloads).
 - Installez la machine virtuelle [Kali-linux](https://www.kali.org/get-kali/#kali-virtual-machines).
 - Une fois la machine démarré, lancez les commandes : `sudo wget https://github.com/ROYJohan08/RJI-HackTools/raw/main/Install.sh | bash`
+- Ouvrez firefox et installez [Cookie-editor](https://addons.mozilla.org/fr/firefox/addon/cookie-editor/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 
 ## Adding dns.
 Add on hosts with `sudo nano /etc/hosts` add to the format `IP DNS`.
 
 [Enumeration](00-Enumeration.md)
+[Exploit](01-Exploit.md)
 
 Others : 
 ```
