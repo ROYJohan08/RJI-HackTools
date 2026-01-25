@@ -16,3 +16,11 @@ Command for read databases :
 ```
 sqlite3 user.db
 ```
+Extract hash from .kdbx
+```
+keepass2john /home/$USER/dataset.kdbx > hash.txt
+```
+Crack hash with JohnSoReaper : 
+```
+john hash.txt
+```
