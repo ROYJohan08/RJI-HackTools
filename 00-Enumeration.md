@@ -15,6 +15,10 @@ Used UDP port list and version complete : [Nmap](Tools.md#nmap)
 ```
 nmap -sU -sV SERVER_IP -T5
 ```
+Used UDP ports and IKE : 
+```
+nmap -sU -sV -T4 {IP}
+```
 Web directory BruteForce : [Dirb](Tools.md#dirb) 
 ```
 dirb http://SERVER_IP:PORT/
