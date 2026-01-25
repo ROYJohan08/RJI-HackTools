@@ -12,3 +12,7 @@ Command for user allowed sudo :
 ```
 sudo -l
 ```
+Command for read databases : 
+```
+sqlite3 user.db
+```
