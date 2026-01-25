@@ -1,6 +1,3 @@
-# Link md
-## Sommaire
-- [Decode javascript eval](#de4j.js)
-
-## de4j.js
-Decode javascript => [de4j.js](https://thanhle.io.vn/de4js/)
+# Link
+- Decode javascript eval : [de4j.js](https://thanhle.io.vn/de4js/)
+- Generate RCE commande or script [RCE Generator](https://www.revshells.com/)
