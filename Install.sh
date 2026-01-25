@@ -5,7 +5,8 @@ sudo apt-get auto-remove -y
 
 sudo apt-get install terminator -y
 sudo apt-get install noterpadqq -y
-sudo apt-get instll gobuster -y
+sudo apt-get install gobuster -y
+sudo apt-get install feroxbuster -y
 
 sudo mkdir -p /home/kali/.ovpnconfig
 sudo mkdir -p /home/kali/tools
