@@ -3,21 +3,20 @@ Osint data from dommain name : [spiderfoot](Tools.md#spiderfoot)
 ```
 python3 sf.py -l 127.0.0.1:80
 ```
-Used port list and infos : [Nmap](Tools.md#nmap) 
+Open port list (short) : [Nmap](Tools.md#nmap) 
 ```
-nmap -A -oN initial_scan SERVER_IP
+# -A : OS detection.
+nmap -A {TARGET_IP}
 ```
-Used port list and version complete : [Nmap](Tools.md#nmap)  
+Open port list (long) : [Nmap](Tools.md#nmap)  
 ```
-nmap -sV -O SERVER_IP -T5
-```
-Used UDP port list and version complete : [Nmap](Tools.md#nmap)  
-```
-nmap -sU -sV SERVER_IP -T5
-```
-Used UDP ports and IKE : 
-```
-nmap -sU -sV -T4 {IP}
+# -sV : Version detection
+# -sT : TCP
+# -sU : UDP
+# -sF : FIN scan
+# -O : OS detection, same as -A
+# -T3 : Test speed, over T3 it can submerge target |Use T0 for bypass IDS servers
+nmap -sV -sT -sU -sF -O {TARGET_IP} -T3
 ```
 Web directory BruteForce : [Dirb](Tools.md#dirb) 
 ```
